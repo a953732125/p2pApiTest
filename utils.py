@@ -135,5 +135,4 @@ if __name__ == '__main__':
     # for i in data:
     #     data_list.append(tuple(i.values())[1:])  # 获取数据中字典的value值,通过切片从第二个开始获取数据
     # print(data_list)
-
     clear_test_data()
