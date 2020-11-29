@@ -1,12 +1,10 @@
 import time
-import unittest, os,app
-from lib.HTMLTestRunner_PY3 import  HTMLTestRunner
+import unittest, os, app
+from lib.HTMLTestRunner_PY3 import HTMLTestRunner
 
-suite = unittest.defaultTestLoader.discover('./scripts',pattern='test0*.py')
+# 在scripts文件下创建测试套件
+suite = unittest.defaultTestLoader.discover('./scripts', pattern='test0*.py')
 
-report_path = app.DIR_NAME+os.sep+'report'+os.sep+'report{}.html'.format(int(time.time()*1000))
-with open(report_path,'wb')as f:
+report_path = app.DIR_NAME + os.sep + 'report' + os.sep + 'report{}.html'.format(int(time.time() * 1000))
+with open(report_path, 'wb')as f:
     HTMLTestRunner(stream=f).run(suite)
-
-
-
